@@ -2,13 +2,14 @@
   "name": "payment-terminal",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://eugenie21.github.io/shakuro-test/",
+  "homepage": "https://eugenie21.github.io/shakuro-payment-terminal/",
   "scripts": {
     "bundle": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
-    "publish-build": "node ./scripts/ghPagesPublish.js",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "check-types": "tsc"
   },
   "author": "",
