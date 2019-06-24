@@ -1,0 +1,16 @@
+@import '~Common/styles/variables';
+
+.RefillForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__Input, &__Message {
+        margin-bottom: $base-offset * 2;
+    }
+
+    &__Message {
+        width: 100%;
+    }
+}

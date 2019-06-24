@@ -1,0 +1,24 @@
+@import '~Common/styles/variables';
+
+@mixin loaderSize($size) {
+    width: $size;
+    height: $size;
+}
+
+.Loader {
+
+    display: inline-block;
+    border: 4px solid rgba($blue, .5);
+    border-right-color: transparent;
+    border-radius: 100%;
+    animation: rotate $base-transition-time * 2 linear forwards infinite;
+
+    &--sm { @include loaderSize($font-size-sm); }
+    &--md { @include loaderSize($font-size-md); }
+    &--lg { @include loaderSize($font-size-lg); }
+
+    @keyframes rotate {
+        from { transform: rotate(0); }
+        to { transform: rotate(360deg); }
+    }
+}

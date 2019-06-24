@@ -1,0 +1,42 @@
+@import '~Common/styles/variables';
+
+.OperatorButton {
+    
+    $button-size: 80px;
+
+    width: $button-size;
+    height: $button-size;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: none;
+    padding: $base-offset;
+    border: 2px dotted $grey;
+    border-radius: $base-border-radius;
+
+    padding: $base-offset * 3;
+
+    &:focus, &:active {
+        outline: none;
+    }
+
+    &:hover {
+        transition: $base-transition-time;
+        border-color: $blue;
+        cursor: pointer;
+    }
+
+    &__Logo {
+        width: $button-size * .5;
+        height: $button-size * .5;
+        margin-bottom: $base-offset / 2;
+    }
+
+    &__Label {
+        font-size: $font-size-sm;
+        font-weight: 500;
+    }
+}

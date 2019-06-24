@@ -1,0 +1,12 @@
+@import '~Common/styles/variables';
+
+.Main {
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &__Title {
+        margin-bottom: $base-offset * 2;
+    }
+}

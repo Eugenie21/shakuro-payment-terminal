@@ -1,0 +1,39 @@
+@import '~Common/styles/variables';
+
+.Input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+
+    &__Label {
+        font-size: $font-size-sm;
+        margin-bottom: $base-offset / 2;
+    }
+    &__InputElement {
+        width: 100%;
+        margin:  0 0 $base-offset / 2;
+        padding: $base-offset $base-offset * 2;
+
+        border: 1px solid $grey;
+        border-radius: $base-border-radius;
+
+        font-size: $font-size-md;
+
+        &:focus {
+            outline: none;
+        }
+    }
+    &__Error {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+        color: $red;
+        font-size: $font-size-xs;
+    }
+
+    &.is-disabled {
+        opacity: .6;
+    }
+}

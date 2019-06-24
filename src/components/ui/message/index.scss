@@ -1,0 +1,20 @@
+@import '~Common/styles/variables';
+
+.Message {
+    padding: $base-offset * 2 $base-offset * 3;
+    font-size: $font-size-md;
+    font-weight: 500;
+    border: 2px solid;
+    border-radius: $base-border-radius;
+    text-align: center;
+    
+    &--success {
+        border-color: $green;
+        background-color: rgba($green, .1);
+    }
+
+    &--error {
+        border-color: $red;
+        background-color: rgba($red, .1);
+    }
+}

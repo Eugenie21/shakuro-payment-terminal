@@ -1,0 +1,18 @@
+@import '~Common/styles/variables';
+
+.Header {
+    width: 100%;
+    background-color: $red;
+    
+    &__Wrap {
+        width: 100%;
+        max-width: $app-width;
+        padding: $base-offset * 2;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    // &__Logo {
+        
+    // }
+}

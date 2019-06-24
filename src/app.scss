@@ -1,0 +1,29 @@
+@import '~normalize-scss/sass/normalize/import-now';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+@import '~Common/styles/variables';
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0
+}
+
+.App {
+    font-family: 'Roboto', sans-serif;
+    color: $dark;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__Content {
+        flex: 1;
+        width: 100%;
+        max-width: $app-width;
+        padding: $base-offset * 3;
+    }
+}

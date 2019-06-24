@@ -1,0 +1,27 @@
+@import '~Common/styles/variables';
+
+.Button {
+    cursor: pointer;
+
+    min-width: 100px;
+    border: 2px solid $blue;
+    padding: $base-offset $base-offset * 2;
+    border-radius: $base-border-radius;
+    font-size: $font-size-md;
+    font-weight: 600;
+    box-shadow: 0 0 0 0 $blue;
+
+    &:hover {
+        transition: $base-transition-time;
+        box-shadow: 0 0 4px 0 $blue;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &.is-disabled {
+        opacity: .4;
+        cursor: default;
+    }
+}

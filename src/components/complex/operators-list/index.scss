@@ -1,0 +1,11 @@
+@import '~Common/styles/variables';
+
+.OperatorsList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &__Operator {
+        margin: 0 $base-offset / 2;
+    }
+}
