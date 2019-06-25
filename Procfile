@@ -1,1 +1,1 @@
-server: PORT=$PORT npm run server
+server: npm run server
