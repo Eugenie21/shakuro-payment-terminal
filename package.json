@@ -6,9 +6,9 @@
   "scripts": {
     "bundle": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development --open --hot",
+    "start": "node ./scripts/server.js",
+    "dev": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
-    "server": "node ./scripts/server.js",
     "check-types": "tsc"
   },
   "author": "",
