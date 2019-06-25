@@ -11,10 +11,11 @@ const classes = {
 }
 
 const operatorLogo: React.StatelessComponent<IProps> = ({ className, operator }) => {
+    const image = require(`Media/cell-operators/${operator.type}.png`);
     return (
         <img 
             className={cx(classes.OperatorLogo, {}, className)}
-            src={`/public/media/cell-operators/${operator.type}.png`} 
+            src={image}
             alt={operator.name} 
         />
     );

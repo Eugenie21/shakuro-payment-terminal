@@ -30,6 +30,7 @@
         "baseUrl": "./src",
 
         "paths": {
+            "Media/*": [ "../public/media/*" ],
             "Components/*": [ "components/*" ],
             "Containers": [ "containers" ],
             "Common": [ "common" ],

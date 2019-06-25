@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 
@@ -15,6 +16,7 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.tsx', '.js', 'scss'],
         alias: {
+            'Media': path.resolve(__dirname, 'public/media'),
             'Components': path.resolve(__dirname, 'src/components'),
             'Containers': path.resolve(__dirname, 'src/containers'),
             'Common': path.resolve(__dirname, 'src/common'),
@@ -40,13 +42,14 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g)$/,
-                loader: require.resolve('url-loader'),
-                options: {
-                    limit: 10000,
-                    name: '[name].[hash].[ext]',
-                },
+                use: {
+                    loader: require.resolve('file-loader'),
+                    options: {
+                        name: 'media/[name].[ext]',
+                        publicPath: '/'
+                    },
+                }
             },
-            
         ]
     },
     devServer: {
